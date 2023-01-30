@@ -13,13 +13,13 @@ final_tip = percentage * Cost
 final_cost = (percentage+1) * Cost
 
 #Asking the user on how to split the bill and tip
-number_of_people = int(input("\nHow many people would you like to split it with? (Put 1 if you are not splitting.)"))
-tip_pp = final_tip / number_of_people
+number_of_people = int(input("\nHow many people would you like to split it with? (Put 1 if you are not splitting) "))
+tip_pp = round(final_tip / number_of_people,2)
 cost_pp = round(final_cost/ number_of_people, 2)
 initial_cost = round(float(Cost/ number_of_people),2)
 
 #System returns to the user the final tip with a cost breakdown
-print(f"\n\nAt a tip of {Tip} percent, each person pays ${cost_pp}. "
+print(f"\n\nEach person pays ${cost_pp}! \nAt a tip of {Tip} %, each person pays ${cost_pp}. "
       f"This is ${initial_cost} per person, and an additional ${tip_pp} in tip each.")
 
 
